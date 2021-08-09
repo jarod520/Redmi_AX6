@@ -34,4 +34,6 @@ rm -rf feeds/packages/utils/ttyd
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
+git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 #git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
