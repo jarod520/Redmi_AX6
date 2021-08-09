@@ -28,10 +28,9 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+  FILE_NAME: OpenWRT-Redmi~AX6
 
 jobs:
   build:
@@ -154,7 +153,7 @@ jobs:
         tag_name: ${{ env.RELEASE_TAG }}
         body: |
             1、本固件ttyd支持ssl单向认证连接，luci界面支持设置。
-            2、本固件默认IP 192.168.1.1，密码为空。
+            2、本固件默认IP 192.168.50.1，密码为空。
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
