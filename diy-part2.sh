@@ -35,7 +35,6 @@ svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
 git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-advanced package/luci-app-advanced
 #git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 # Add luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
