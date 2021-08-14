@@ -59,6 +59,8 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        useVersionInfo=$(git show -s --date=short --format="编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录:<br/>更新人: %an<br/>更新时间: %cd<br/>更新内容: %s<br/>哈希值: %H")
+        echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d-%H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y.%m.%d")" >> $GITHUB_ENV
 
@@ -152,6 +154,9 @@ jobs:
         body: |
             1、本固件ttyd支持ssl单向认证连接，luci界面支持设置。
             2、本固件默认IP 192.168.50.1，密码为空。
+            3、本固件内置ssr+、全能推送、OpenClash、动态DNS、WIFI计划、网络唤醒、uHTTPD、uPnP、简单Mesh、Turbo ACC 网络加速、带宽监视器
+            4、本固件只支持IPV4
+            ${{ env.useVersionInfo }}
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
