@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+sed -i 's/10.10.10.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 # 修改版本信息
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
