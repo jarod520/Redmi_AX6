@@ -28,10 +28,12 @@ sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po
 rm -rf package/lean/luci-app-ttyd
 rm -rf feeds/packages/utils/ttyd
 rm -rf package/lean/luci-theme-argon
+rm -rf package/kernel/mac80211/files/lib/wifi
 #添加额外非必须软件包
 #git clone https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/jarod360/packages/trunk/ttyd package/ttyd
+svn co https://github.com/jarod360/openwrt/trunk/package/kernel/mac80211/files/lib/wifi package/kernel/mac80211/files/lib/wifi/
 git clone https://github.com/jarod360/luci-app-ttyd package/luci-app-ttyd
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
