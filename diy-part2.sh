@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/10.10.10.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+sed -i 's/10.10.10.1/192.168.30.1/g' package/base-files/files/bin/config_generate
 # 修改版本信息
 date=`date +%Y.%m.%d`
 sed -i 's/OpenWrt/OpenWrt Build '$date' By Jarod Chang/g' package/lean/default-settings/files/zzz-default-settings
@@ -21,6 +21,7 @@ sed -i 's/%D %V, %C/%D %V, '$date' By Jarod Chang/g' package/base-files/files/et
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 #设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
+sed -i 's/$1$WplwC1t5$HBAtVXABp7XbvVjG4193B.:18753:0:99999:7/0:0:99999:7/g' package/base-files/files/etc/shadow
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改插件名字
 sed -i 's/"带宽监控"/"带宽"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
